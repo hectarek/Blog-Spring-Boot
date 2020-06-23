@@ -1,0 +1,17 @@
+
+
+.blog-style {
+    background-color: rgb(249, 249, 249);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+html {
+    background-color: #f8f9fa;
+    padding: 0.5em 1em;
+}
+
+body {
+    height: 95vh;
+}

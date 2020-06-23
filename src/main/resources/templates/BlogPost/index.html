@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymelead.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="/fragments/styling :: head-style"></div>
+
+    <title>Hector's Blog Site</title>
+
+</head>
+
+<body>
+    <div th:replace="/fragments/navbar :: navbar"></div>
+
+    <div class="container">
+
+        <div class="row m-5 justify-content-center">
+            <h1>Welcome to my Blog!</h1>
+        </div>
+
+        <div class="row m-5 justify-content-center">
+            <h3>Check out my posts</h3>
+        </div>
+
+        <div class="row m-3 p-3" th:each="blog:${posts}">
+            <div class="media col-sm blog-style align-items-center">
+                <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/72583433_10221210503158912_2651215674675822592_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=1-QgdWrjkREAX-iK8k8&_nc_ht=scontent-dfw5-1.xx&oh=bdfb799d2c9d422032532e87403925b1&oe=5F194479"
+                    class="m-2 " alt="Hecs Pic" width="64px" height="64px">
+                <div class="media-body">
+                    <h5 class="m-1" th:text="${blog.title}"></h5>
+                    <h6 class="m-1" th:text="${blog.author}"></h6>
+                    <p th:text="${blog.blogEntry}"></p>
+                </div>
+                <button class="btn btn-primary m-2">Edit</button>
+                <button class="btn btn-danger m-2">Delete</button>
+            </div>
+        </div>
+
+        <div class="row m-5 justify-content-center">
+            <a href="/blogposts/new">
+                <button class="btn btn-info btn-lg">Submit a New Blog Post</button>
+            </a>
+        </div>
+        
+
+    </div>
+
+
+    <div th:replace="/fragments/styling :: body-links"></div>
+
+</body>
+
+</html>

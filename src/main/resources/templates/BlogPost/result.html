@@ -37,11 +37,12 @@
             <a href="/">
                 <button class="btn btn-secondary m-2">Return Home</button>
             </a>
-
+            <a href="#" th:href="@{blogposts/{id}(id=${blogPost.id})}">
+                <button class="btn btn-light m-2">Edit Post</button>
+            </a>
             <a href="/blogposts/new">
                 <button class="btn btn-info m-2">Create Another Blog Post</button>
             </a>
-
         </div>
         
         
